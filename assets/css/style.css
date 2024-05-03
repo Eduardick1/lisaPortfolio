@@ -1,0 +1,215 @@
+@import "./reset.css";
+@import "./fonts.css";
+:root {
+    --bgMainColor: #f6f6f6;
+    --textColor: #000000;
+    --activeGreenColor: #9EF332;
+    --hFontSize: clamp(48px, 13vw, 230px);
+    --pFontSize: 14px;
+    --hFontFam: "NeueMachina-Ultrabold", sans-serif;
+    --pFontFam: "NeueMachina-Regular", sans-serif;
+    --footerFontFam: "NeueMachina-Light", sans-serif;
+    --blendMode: difference;
+}
+
+body {
+    background: var(--bgMainColor);
+    color: var(--textColor);
+    padding: 48px 0 82px;
+}
+
+h1,
+h2 {
+    font-size: var(--hFontSize);
+    font-family: var(--hFontFam);
+    line-height: 0.7;
+}
+
+p {
+    font-size: var(--pFontSize);
+    font-family: var(--pFontFam);
+}
+
+header {
+    text-align: center;
+    p {
+        margin: 40px auto 0;
+        max-width: 1020px;
+    }
+}
+
+.hero {
+    margin-top: 75px;
+    background-color: var(--activeGreenColor);
+    padding: min(4vw, 30px);
+    display: flex;
+    flex-direction: column;
+    gap: min(4vw, 30px);
+    .hero__top {
+        position: relative;
+        height: 146px;
+        display: flex;
+        justify-content: space-between;
+        p {
+            max-width: 270px;
+            position: relative;
+        }
+        .hero__top_img {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            max-width: 50%;
+            mix-blend-mode: var(--blendMode);
+            z-index: 0;
+        }
+    }
+    .hero__images {
+        display: flex;
+        gap: min(2vw, 20px);
+        div {
+            flex-grow: 1;
+            img {
+                display: block;
+                max-width: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+    }
+}
+
+.sphere {
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    .sphere__content {
+        position: relative;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        .sphere__content__top {
+            display: flex;
+            gap: 20px;
+            p {
+                max-width: 233px;
+            }
+        }
+        .sphere__content__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+        }
+        img {
+            position: absolute;
+            right: 45%;
+            bottom: 50%;
+            height: 90%;
+            translate: 50% 50%;
+            mix-blend-mode: var(--blendMode);
+        }
+    }
+}
+
+.nftDesk {
+    margin-top: 138px;
+    img {
+        max-width: 100%;
+        width: 100%;
+        display: block;
+    }
+}
+
+.nftMob {
+    margin-top: 141px;
+    display: flex;
+    justify-content: space-between;
+    background: url("../images/section4Img.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    .nftMob__content {
+        max-width: 306px;
+        height: 100%;
+    }
+    .nftMob__image {
+        max-width: 581px;
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 20px;
+        background: url("../images/section4bg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.myone {
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    .myone__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        &:first-of-type {
+            position: relative;
+            h2 {
+                color: var(--activeGreenColor);
+            }
+            img {
+                position: absolute;
+                max-width: 60vw;
+                bottom: 50%;
+                right: 0;
+                translate: 1% 50%;
+                mix-blend-mode: var(--blendMode);
+            }
+        }
+        &:nth-of-type(odd) {
+            h2 {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.tomFord {
+    margin: 200px 0;
+    position: relative;
+    img {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    div {
+        position: absolute;
+        width: 70%;
+        top: -77px;
+        right: 50%;
+        translate: 50%;
+        box-shadow: 0 -13px 100px 0 #FF7096;
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--footerFontFam);
+    label {
+        display: flex;
+        flex-direction: column;
+        p {
+            font-size: 20px;
+        }
+        a {
+            font-size: 36px;
+        }
+    }
+}
